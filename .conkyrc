@@ -1,0 +1,64 @@
+#conky
+
+background yes
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+
+use_xft yes
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+
+double_buffer yes
+no_buffers yes
+
+alignment top_right
+uppercase yes
+gap_x 20
+gap_y 40
+sudo fc-cache -f -v
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+minimum_size 250 400
+maximum_width 250
+
+#time
+color1 323232
+
+#most
+color2 555555
+
+color3 428bca
+color4 5cb85c
+
+TEXT
+${image ~/.conky/bg.png -p 0,0}
+${color1}${voffset -10}${alignc}${font Oswald Light:pixelsize=50}${time %H:%M}
+${color1}${voffset -45}${alignc}${font Oswald Light:pixelsize=14}${time %a %d %b}
+${image ~/.conky/sepa.png -p 15,105}
+${voffset -12}${color1}${alignc}${font Oswald Light:pixelsize=16}PROCESSORS/MEMORY
+
+
+${voffset -50}${goto 22}${color3}${font Droid Sans:pixelsize=10}CPU 1: ${color2}${goto 115}${freq_g 0} ${color2}Ghz ${goto 14}${color2}${alignr}${goto 220}${cpu cpu0}${color1}%
+${goto 22}${color3}${font Droid Sans:pixelsize=10}CPU 2: ${color2}${goto 115}${freq_g 1} ${color2}Ghz ${goto 14}${color2}${alignr}${goto 220}${cpu cpu1}${color1}%
+
+${voffset -5}${alignc}${loadgraph 60,220 428bca 428bca -l}
+${voffset 3}${goto 22}${color3}${font Droid Sans:pixelsize=10}RAM: ${color1}${goto 115}${mem}
+${voffset 2}${goto 22}${color3}${font Droid Sans:pixelsize=10}TOTAL: ${color1}${goto 115}${memmax}
+${voffset 2}${goto 22}${color3}${font Droid Sans:pixelsize=10}UPTIME: ${color1}${goto 115}${uptime}
+
+${image ~/.conky/sepa.png -p 15,290}
+${voffset -12}${color1}${alignc}${font Oswald Light:pixelsize=16}TOP PROCESSES
+${voffset -5}${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 1}${color1}${goto 115}${top_mem mem_res 1}${color2}${alignr}${goto 200}${top_mem mem 1}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 2}${color1}${goto 115}${top_mem mem_res 2}${color2}${alignr}${goto 200}${top_mem mem 2}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 3}${color1}${goto 115}${top_mem mem_res 3}${color2}${alignr}${goto 200}${top_mem mem 3}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 4}${color1}${goto 115}${top_mem mem_res 4}${color2}${alignr}${goto 200}${top_mem mem 4}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 5}${color1}${goto 115}${top_mem mem_res 5}${color2}${alignr}${goto 200}${top_mem mem 5}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 5}${color1}${goto 115}${top_mem mem_res 6}${color2}${alignr}${goto 200}${top_mem mem 6}${color1} %
+${goto 22}${color1}${font Droid Sans:pixelsize=10}${color3}${top_mem name 5}${color1}${goto 115}${top_mem mem_res 7}${color2}${alignr}${goto 200}${top_mem mem 7}${color1} %
