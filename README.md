@@ -2,7 +2,7 @@
 My .conkyrc flie
 
 <div align="center">
-![GitHub Logo](screenshot.png)
+<img src="screenshot.png">
 </div>
 ### installation
 install conky `sudo apt install conky-all`
