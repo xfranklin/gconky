@@ -1,10 +1,10 @@
 # gconky
 My .conkyrc flie
 
+<div align="center">
 ![GitHub Logo](screenshot.png)
-Format: ![Alt Text](url)
-
-## installation
+</div>
+### installation
 install conky `sudo apt install conky-all`
 install fonts `Droid Sans` and `Oswald`
 
