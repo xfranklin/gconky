@@ -8,7 +8,7 @@ Simple .conkyrc file
 
 install conky `sudo apt install conky-all` <br>
 install fonts `Droid Sans` and `Oswald Light` <br>
-move `.conkyrc` and  `/conky` to home folder
+move `.conkyrc` and  `.conky/` to home folder
 
 <h4>change position</h4>
 
